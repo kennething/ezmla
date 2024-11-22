@@ -68,7 +68,7 @@ useSeoMeta({
     ogSiteName: "EZMLA",
     ogUrl: "https://ezmla.netlify.app",
     twitterCard: "summary_large_image",
-    twitterImage: "https://ezmla.netlify.app/logoSmallBlue.png",
+    ogImageUrl: "https://ezmla.netlify.app/logoSmallBlue.png",
     author: "Kenneth Ng"
 });
 
