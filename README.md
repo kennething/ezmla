@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://ezmla.netlify.app">
-    <img alt="EZMLA" src="https://github.com/DubNubz/ezmla/public/logo.svg?raw=true" width="500" />
+    <img alt="EZMLA" src="[https://github.com/DubNubz/ezmla/public/logo.svg](https://github.com/DubNubz/ezmla/blob/main/public/logo.svg)?raw=true" width="500" />
   </a>
 </p>
 
