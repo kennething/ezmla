@@ -45,7 +45,7 @@
                 <div class="mt-2 flex w-full items-center justify-around">
                     <p>Made by Kenneth Ng</p>
                     <p>Version {{ changelog[changelog.length - 1].version }}</p>
-                    <a href="https://github.com/DubNubz" target="_blank"><img class="size-8 dark:invert" src="/logo-github.svg" alt="Follow my GitHub" /></a>
+                    <a href="https://github.com/DubNubz/ezmla" target="_blank"><img class="size-8 dark:invert" src="/logo-github.svg" alt="Follow my GitHub" /></a>
                 </div>
             </div>
         </div>
