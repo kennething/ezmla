@@ -62,13 +62,13 @@ const { isDarkMode } = storeToRefs(store);
 useSeoMeta({
     title: "EZMLA - MLA Citation Generator",
     ogTitle: "EZMLA - MLA Citation Generator",
-    ogImage: () => (isDarkMode.value ? "https://ezmla.netlify.app/logoSmallBlue.png" : "https://ezmla.netlify.app/logoSmallOrange.png"),
+    ogImage: "https://ezmla.netlify.app/logo.png",
     description: "Easily cite any website or article using MLA format for free, without ads!",
     ogDescription: "Easily cite any website or article using MLA format for free, without ads!",
     ogSiteName: "EZMLA",
     ogUrl: "https://ezmla.netlify.app",
     twitterCard: "summary_large_image",
-    ogImageUrl: "https://ezmla.netlify.app/logoSmallBlue.png",
+    twitterImage: "https://ezmla.netlify.app/logoSmallBlue.png",
     author: "Kenneth Ng"
 });
 
