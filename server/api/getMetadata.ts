@@ -6,7 +6,6 @@ export default defineEventHandler(async (event) => {
     setHeader(event, "Access-Control-Allow-Methods", "POST");
 
     const body = (await readBody(event)) as Body;
-    console.log(body);
 
     if (!body.url) {
         return { error: "URL is required" };

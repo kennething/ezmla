@@ -10,7 +10,7 @@
     --primary-shade: #90479c;
     --primary-shade-translucent: #90479c33;
     --secondary: #2df199;
-    --secondary-shade: #a5f8d3;
+    --secondary-shade: #b1fccb;
     --faded-blue: #a0b9c6;
     --gray: #9a98b5;
 
@@ -23,17 +23,6 @@
     --text-color: black;
     --faded-text-color: rgb(70, 70, 70);
     --text-color-contrast: white;
-
-    --enemy: rgb(223, 181, 181);
-    --you: rgb(201, 226, 201);
-    --ice: rgb(83, 161, 250);
-    --ice-secondary: rgb(149, 197, 253);
-    --fire: rgb(248, 106, 96);
-    --fire-secondary: rgb(253, 156, 149);
-    --air: rgb(125, 111, 248);
-    --air-secondary: rgb(156, 149, 253);
-    --earth: hsl(244, 7%, 62%);
-    --earth-secondary: rgb(223, 222, 236);
 }
 
 .dark {
@@ -42,7 +31,7 @@
     --primary-shade: #74417e;
     --primary-shade-translucent: #a82ec04b;
     --secondary: #17975e;
-    --secondary-shade: #2a7c57;
+    --secondary-shade: rgb(112, 189, 154);
     --faded-blue: #a0b9c6;
     --gray: #9a98b5;
 
@@ -64,6 +53,7 @@ body {
     min-height: 100vh;
     overflow-x: hidden;
     background-color: var(--bg-color);
+    display: none;
 }
 
 * {
@@ -73,17 +63,18 @@ body {
     font-weight: 400;
     font-style: normal;
     color: var(--text-color);
-    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+    transition-property: background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-duration: 500ms;
+    transition-duration: 300ms;
 }
 
 button {
     touch-action: manipulation;
 }
 
-.comic-sans {
-    font-family: "Comic Sans MS", sans-serif;
+.times-new-roman {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 16.25px;
 }
 
 input::-webkit-outer-spin-button,
