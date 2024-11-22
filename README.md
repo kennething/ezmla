@@ -19,6 +19,10 @@
   <a href="https://ezmla.netlify.app">
     EZMLA
   </a>
+  <span> · </span>
+  <a href="https://ezmla.netlify.app?changelog=true">
+    Changelog
+  </a>
 </h2>
 
 ## Project Setup
