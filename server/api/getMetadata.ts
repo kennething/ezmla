@@ -12,11 +12,9 @@ export default defineEventHandler(async (event) => {
     }
 
     try {
-        // Fetch metadata from the target URL
         const response = await fetch(body.url, { headers: { "User-Agent": "Mozilla/5.0" } });
         const html = await response.text();
 
-        // Parse HTML to extract metadata
         const metadata: Record<string, string | null> = {};
         const titleMatch = html.match(/<title>(.*?)<\/title>/i);
         metadata.title = titleMatch ? titleMatch[1] : null;
