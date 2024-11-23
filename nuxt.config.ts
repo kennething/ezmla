@@ -23,7 +23,20 @@ export default defineNuxtConfig({
                 },
                 { name: "keywords", content: "mla, citation, generator, cite, format, ezmla, english, literature, paper, research" }
             ],
-            link: [{ rel: "icon", type: "image/svg+xml", href: "/logoSmallBlue.svg" }]
+            link: [{ rel: "icon", type: "image/svg+xml", href: "/logoSmallBlue.svg" }],
+            script: [
+                { src: "https://www.googletagmanager.com/gtag/js?id=G-0DL8BPXX9P", async: true },
+                {
+                    hid: "gtag",
+                    innerHTML: `
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){ dataLayer.push(arguments); }
+                    gtag('js', new Date());
+                    gtag('config', 'G-0DL8BPXX9P');
+                  `,
+                    type: "text/javascript"
+                }
+            ]
         }
     }
 });

@@ -1,10 +1,10 @@
 <template>
-    <div class="flex h-svh w-screen flex-col items-center justify-center gap-2 sm:my-20 md:justify-start">
+    <div class="flex h-svh w-screen flex-col items-center justify-center gap-2 md:justify-start sm:my-20">
         <img class="dark:invert" :class="{ 'h-32': !citation, 'mb-20': !citation, 'mb-3': citation, 'h-16': citation }" src="/logo.svg" aria-hidden="true" />
 
         <form id="search" class="flex h-20 flex-col items-center justify-start gap-1" @submit.prevent="cite">
-            <label class="du-input du-input-bordered flex w-[40rem] items-center gap-2 sm:w-80 md:w-96 dark:bg-[color:var(--faded-bg-color)]">
-                <input type="text" class="grow" placeholder="URL" v-model="url" />
+            <label class="du-input du-input-bordered flex w-[40rem] items-center gap-2 md:w-96 sm:w-80 dark:bg-[color:var(--faded-bg-color)]">
+                <input type="text" class="grow" placeholder="Search by URL" v-model="url" />
                 <button type="submit">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="h-4 w-4 opacity-70">
                         <path
@@ -52,7 +52,7 @@
             Copy Citation
         </button>
 
-        <div v-show="citation" class="mt-8 flex w-[50rem] items-center justify-center rounded-xl border-2 border-[color:var(--faded-bg-color-dark)] p-4 sm:w-80 md:w-96">
+        <div v-show="citation" class="mt-8 flex w-[50rem] items-center justify-center rounded-xl border-2 border-[color:var(--faded-bg-color-dark)] p-4 md:w-96 sm:w-80">
             <p ref="citationText" class="w-3/4 text-wrap text-center transition-none">
                 <span class="times-new-roman" :class="{ italic: part.bold }" v-for="part in formatDescription(citation)">{{ part.text }}</span>
             </p>
@@ -85,6 +85,13 @@
 </template>
 
 <script setup lang="ts">
+const url = ref("");
+const citation = ref("");
+
+useHead({
+    title: () => (citation.value && url.value ? `${url.value} | ` : "") + "EZMLA - MLA Citation Generator"
+});
+
 type Data = {
     metadata: Record<string, string | null>;
 };
@@ -97,9 +104,6 @@ const error = ref("");
 watch(error, (val) => {
     if (val) loading.value = false;
 });
-
-const url = ref("");
-const citation = ref("");
 
 const author = ref("");
 const title = ref("");
