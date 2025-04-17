@@ -195,14 +195,8 @@ function generateCitation() {
 }
 
 async function copyCitation() {
-    if (!citationText.value) return;
-
-    const content = citationText.value.innerHTML;
-    const blob = new Blob([content], { type: "text/html" });
-    const clipboardItem = new ClipboardItem({ "text/html": blob });
-
     try {
-        await navigator.clipboard.write([clipboardItem]);
+        await navigator.clipboard.writeText(citation.value.replaceAll("*", ""));
         alert("Citation copied to clipboard.");
     } catch (error) {
         alert("Failed to copy.");
